@@ -17,16 +17,12 @@ suggestions = all_texts  # use this list for autocomplete
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # -----------------------------
-# Load tokenizer & model
+# Load tokenizer & model directly from Hugging Face Hub
 NUM_LABELS = 3
-MODEL_NAME = "bert-base-uncased"
+MODEL_NAME = "humasfurquan/hatexplain-bert"  # replace with your repo
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-model = AutoModelForSequenceClassification.from_pretrained(
-    MODEL_NAME,
-    num_labels=NUM_LABELS
-)
-model.load_state_dict(torch.load("best_hatexplain_bert.pth", map_location=device))
+model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 model.to(device)
 model.eval()
 
@@ -79,7 +75,7 @@ def set_suggestion(suggestion):
     st.session_state.input_text = suggestion
     st.session_state.last_selected = suggestion  # store the clicked suggestion
 
-# Text input
+# Text input (live typing)
 input_text = st.text_input(
     "Enter your text:",
     value=st.session_state.input_text,
@@ -92,7 +88,7 @@ if input_text.strip():
     filtered_suggestions = [
         s for s in suggestions
         if s.lower().startswith(input_text.lower())
-        and s != st.session_state.last_selected  # hide last clicked suggestion
+        and s != st.session_state.last_selected
     ]
     # Sort by length (ascending)
     filtered_suggestions.sort(key=len)
