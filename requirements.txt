@@ -1,5 +1,6 @@
 streamlit==1.28.0
-torch==2.2.0+cpu
-transformers==4.33.1
 matplotlib==3.8.1
+transformers==4.33.1
 pickle5==0.0.12
+# CPU-only PyTorch
+torch==2.2.0+cpu --extra-index-url https://download.pytorch.org/whl/cpu
