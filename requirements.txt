@@ -1,6 +1,0 @@
-streamlit
-torch
-transformers
-matplotlib
-numpy
-pickle-mixin
