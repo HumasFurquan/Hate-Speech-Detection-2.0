@@ -7,12 +7,12 @@ import pickle
 import os
 
 # -----------------------------
-# Page config
-st.set_page_config(page_title="HateXplain Classifier", layout="centered")
+# Force HF cache (important for local Windows)
+os.environ["HF_HOME"] = os.getenv("HF_HOME", "./hf_cache")
 
 # -----------------------------
-# Device (FORCE CPU – Streamlit Cloud)
-device = torch.device("cpu")
+# Page config
+st.set_page_config(page_title="HateXplain Classifier", layout="centered")
 
 # -----------------------------
 # Load suggestions safely
@@ -22,15 +22,16 @@ if os.path.exists("all_texts.pkl"):
         suggestions = pickle.load(f)
 
 # -----------------------------
-# Load tokenizer & model from Hugging Face (cached)
+# Force CPU (deployment-safe)
+device = torch.device("cpu")
+
+# -----------------------------
+# Load model from Hugging Face
 @st.cache_resource
 def load_model():
     MODEL_NAME = "humasfurquan/hatexplain-bert"
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    model = AutoModelForSequenceClassification.from_pretrained(
-        MODEL_NAME,
-        num_labels=3
-    )
+    model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
     model.to(device)
     model.eval()
     return tokenizer, model
@@ -57,11 +58,8 @@ def predict_text(text):
         return_tensors="pt"
     )
 
-    input_ids = encoding["input_ids"].to(device)
-    attention_mask = encoding["attention_mask"].to(device)
-
     with torch.no_grad():
-        outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+        outputs = model(**encoding)
         logits = outputs.logits
         probs = F.softmax(logits, dim=1)[0].cpu().numpy()
         label_id = torch.argmax(logits, dim=1).item()
@@ -85,13 +83,13 @@ def set_suggestion(text):
 
 # Text input
 input_text = st.text_input(
-    "Enter text:",
+    "Enter your text:",
     value=st.session_state.input_text,
     key="input_text"
 )
 
 # -----------------------------
-# Autocomplete suggestions
+# Autocomplete
 if input_text.strip() and suggestions:
     filtered = [
         s for s in suggestions
@@ -104,7 +102,7 @@ if input_text.strip() and suggestions:
         st.button(f"→ {s}", on_click=set_suggestion, args=(s,))
 
 # -----------------------------
-# Prediction output
+# Prediction
 if input_text.strip() and len(input_text.strip()) > 2:
     label, probs = predict_text(input_text)
 
