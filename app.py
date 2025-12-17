@@ -82,9 +82,11 @@ def set_suggestion(text):
     st.session_state.last_selected = text
 
 # Text input
+if "input_text" not in st.session_state:
+    st.session_state.input_text = "Type here..."
+
 input_text = st.text_input(
     "Enter your text:",
-    value=st.session_state.input_text,
     key="input_text"
 )
 
