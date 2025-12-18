@@ -128,6 +128,19 @@ These iterations reflect real-world ML challenges such as resource constraints, 
 
 ---
 
+## 🚧 Engineering Challenges Solved
+
+During the development and deployment of this project, several real-world engineering challenges were identified and resolved:
+
+- **GitHub file size limitations:** The trained Transformer model exceeded GitHub’s file size limits, making direct storage in the repository impractical.
+- **Model storage solution:** The model was hosted on **Hugging Face Hub**, enabling versioned, scalable, and industry-standard model distribution.
+- **Dynamic model loading in Streamlit:** Implemented runtime model loading with proper handling of CPU/GPU availability to ensure smooth deployment.
+- **Cache handling:** Configured Hugging Face cache management to avoid repeated downloads and ensure consistent behavior across local and cloud environments.
+
+These solutions demonstrate practical considerations required when transitioning from experimentation to production-ready machine learning applications.
+
+---
+
 ## 🖥️ Tech Stack
 
 | Layer         | Technology                |
