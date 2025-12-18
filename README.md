@@ -15,15 +15,15 @@ A **production-ready NLP web application** for detecting and explaining hate spe
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](assets/home.png)
+![Home Page](assets/home.jpg)
 
 ### 💡 Text Suggestions
-![Suggestions](assets/suggestions.png)
+![Suggestions](assets/suggestions.jpg)
 
 ### 📊 Prediction Results
-![Prediction Result 1](assets/prediction_1.png)
-![Prediction Result 2](assets/prediction_2.png)
-![Prediction Result 2](assets/prediction_3.png)
+![Prediction Result 1](assets/prediction_1.jpg)
+![Prediction Result 2](assets/prediction_2.jpg)
+![Prediction Result 2](assets/prediction_3.jpg)
 
 ---
 
