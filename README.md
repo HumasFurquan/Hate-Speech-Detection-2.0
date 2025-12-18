@@ -39,6 +39,16 @@ This project is suitable for:
 
 ---
 
+## ❓ Problem Statement
+
+The rapid growth of user-generated content on social media and online platforms has led to a significant increase in **toxic, abusive, and hate-based language**. Manually moderating such content is **time-consuming, expensive, and not scalable**, especially at the scale of millions of daily posts.
+
+Traditional rule-based systems fail to capture contextual and semantic nuances of language, leading to high false positives and negatives. As a result, there is a strong need for **machine learning–based solutions** that can automatically detect hate speech with high accuracy while being deployable in real-world systems.
+
+This project aims to address these challenges by leveraging **Transformer-based NLP models** to perform reliable hate speech detection and demonstrate how such models can be trained, hosted, and deployed in production environments.
+
+---
+
 ## 🧠 Key Features
 
 * ✅ Transformer-based hate speech classification (BERT-family model)
