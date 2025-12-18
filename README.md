@@ -6,6 +6,27 @@ A **production-ready NLP web application** for detecting and explaining hate spe
 
 ---
 
+## 🎥 Project Demo
+
+![Project Demo](assets/demo.gif)
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](assets/home.png)
+
+### 💡 Text Suggestions
+![Suggestions](assets/suggestions.png)
+
+### 📊 Prediction Results
+![Prediction Result 1](assets/prediction_1.png)
+![Prediction Result 2](assets/prediction_2.png)
+![Prediction Result 2](assets/prediction_3.png)
+
+---
+
 ## 🚀 Project Overview
 
 **Hate Speech Detection 2.0** is designed to classify user-provided text into hate-related categories while providing **model interpretability** and a clean, interactive UI. The project focuses on scalability, reproducibility, and real-world deployment constraints (large model size, cloud storage, inference latency).
