@@ -84,6 +84,23 @@ Prediction + Confidence Visualization
 
 ---
 
+## 📈 Model Performance
+
+The model was trained for 3 epochs and evaluated on a held-out validation set. The best-performing model was selected based on validation F1-score.
+
+**Best Validation Metrics:**
+- **Accuracy:** 69.21%
+- **F1-score:** 69.40%
+
+**Training Summary:**
+- Epoch 1 — Val Acc: 69.21%, Val F1: 69.40% ✅ (Best model saved)
+- Epoch 2 — Val Acc: 67.76%, Val F1: 67.96%
+- Epoch 3 — Val Acc: 67.81%, Val F1: 67.97%
+
+> Note: While training loss continued to decrease across epochs, validation performance peaked early, indicating the onset of overfitting. The final deployed model corresponds to the best validation checkpoint.
+
+---
+
 ## 🤗 Model Hosting (Hugging Face)
 
 Due to GitHub’s file size limitations, the trained model is hosted on **Hugging Face Hub** and dynamically loaded during app startup.
