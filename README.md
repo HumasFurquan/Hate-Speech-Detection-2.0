@@ -215,6 +215,8 @@ Hate-Speech-Detection-2.0/
 * English-language focused
 * Not a replacement for human moderation
 
+These limitations are common in supervised NLP systems and can be mitigated through dataset expansion, multilingual training, and continual learning with real-world feedback.
+
 ---
 
 ## 📈 Future Improvements
