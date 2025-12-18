@@ -1,5 +1,10 @@
 # Hate Speech Detection 2.0
 
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red?logo=pytorch)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Transformers-yellow?logo=huggingface)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-FF4B4B?logo=streamlit)
+
 A **production-ready NLP web application** for detecting and explaining hate speech using a fine-tuned Transformer model. This project demonstrates an **end-to-end ML pipeline** — from dataset handling and model training to cloud model hosting (Hugging Face) and live deployment (Streamlit).
 
 🔗 **Live Demo**: [https://hatexspeechxdetectionx2x0.streamlit.app/](https://hatexspeechxdetectionx2x0.streamlit.app/)
