@@ -83,6 +83,18 @@ This approach ensures:
 
 ---
 
+## 🧪 Training Journey & Optimization
+
+This project went through multiple iterations:
+
+- **First attempt:** Model training was performed on CPU, taking approximately **7 hours**, highlighting the limitations of local CPU-based training for large Transformer models.
+- **Second attempt:** Training was interrupted due to session termination, resulting in loss of in-memory variables and requiring a full restart.
+- **Final iteration:** The model was successfully trained using **GPU acceleration**, reducing training time to **~26 minutes** and significantly improving development efficiency.
+
+These iterations reflect real-world ML challenges such as resource constraints, session management, and the importance of hardware acceleration.
+
+---
+
 ## 🖥️ Tech Stack
 
 | Layer         | Technology                |
