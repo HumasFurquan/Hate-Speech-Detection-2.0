@@ -20,7 +20,7 @@ A **production-ready NLP web application** for detecting and explaining hate spe
 
 ## 📸 Screenshots
 
-### 🏠 Interface & Input
+### 🏠 Interface & Input (Home Page & Text Suggestions)
 
 | Home Page | Text Suggestions |
 |-----------|------------------|
