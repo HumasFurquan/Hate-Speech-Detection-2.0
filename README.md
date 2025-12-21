@@ -20,16 +20,19 @@ A **production-ready NLP web application** for detecting and explaining hate spe
 
 ## 📸 Screenshots
 
-### 🏠 Home Page
-![Home Page](assets/home.jpg)
+### 🏠 Interface & Input
 
-### 💡 Text Suggestions
-![Suggestions](assets/suggestions.jpg)
+| Home Page | Text Suggestions |
+|-----------|------------------|
+| ![](assets/home.jpg) | ![](assets/suggestions.jpg) |
+
+---
 
 ### 📊 Prediction Results
-![Prediction Result 1](assets/prediction_1.jpg)
-![Prediction Result 2](assets/prediction_2.jpg)
-![Prediction Result 2](assets/prediction_3.jpg)
+
+| Result 1 | Result 2 | Result 3 |
+|----------|----------|----------|
+| ![](assets/prediction_1.jpg) | ![](assets/prediction_2.jpg) | ![](assets/prediction_3.jpg) |
 
 ---
 
